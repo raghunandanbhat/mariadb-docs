@@ -22,6 +22,7 @@ It contains the following columns:
 | COLLATION\_NAME            | [Collation](../../../data-types/string-data-types/character-sets/) if a non-binary [string data type](../../../data-types/string-data-types/), otherwise NULL.     |
 | DTD\_IDENTIFIER            | Description of the data type.                                                                                                                                      |
 | ROUTINE\_TYPE              | PROCEDURE or FUNCTION.                                                                                                                                             |
+| PARAMETER_DEFAULT          | Parameter's default value. NULL if no default value. The value is only shown if the current user or any of its enabled roles is the owner of parameter's `SPECIFIC_SCHEMA`, otherwise NULL.|
 
 Information from this table is similar to that found in the `param_list` column in the [mysql.proc](../../the-mysql-database-tables/mysql-proc-table.md) table, and the output of the [SHOW CREATE PROCEDURE](../../../sql-statements/administrative-sql-statements/show/show-create-procedure.md) and [SHOW CREATE FUNCTION](../../../sql-statements/administrative-sql-statements/show/show-create-function.md) statements.
 
@@ -49,6 +50,7 @@ CHARACTER_MAXIMUM_LENGTH: 255
           COLLATION_NAME: utf8_general_ci
           DTD_IDENTIFIER: varchar(255)
             ROUTINE_TYPE: PROCEDURE
+       PARAMETER_DEFAULT: NULL
 ```
 
 <sub>_This page is licensed: CC BY-SA / Gnu FDL_</sub>
